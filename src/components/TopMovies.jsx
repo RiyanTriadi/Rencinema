@@ -8,13 +8,13 @@ function TopMovieItem({ movie, rank }) {
     return (
         <Link
             href={`/movies/${id}`}
-            className="flex items-start gap-4 p-4 bg-[#1a1a1a] border border-[#2e2e2e] rounded-lg hover:border-[#e50914] hover:translate-x-1 transition-all duration-200"
+            className="flex items-start gap-4 p-4 bg-surface border border-border rounded-lg hover:border-primary hover:translate-x-1 transition-all duration-200"
         >
-            <span className="text-4xl font-black text-[#2e2e2e] min-w-[2.5rem] leading-none pt-1">
+            <span className="text-4xl font-black text-rating min-w-10 leading-none pt-1">
                 #{rank}
             </span>
 
-            <div className="relative w-[70px] h-[105px] flex-shrink-0 rounded overflow-hidden">
+            <div className="relative w-17.5 h-26 shrink-0 rounded overflow-hidden">
                 <Image
                     src={getPosterUrl(poster_path, "sm")}
                     alt={title}
@@ -39,8 +39,8 @@ function TopMovieItem({ movie, rank }) {
 export default function TopMovies({ movies }) {
     return (
         <section className="py-16">
-            <div className="max-w-[1280px] mx-auto px-6">
-                <h2 className="text-3xl font-bold mb-8 pl-4 relative before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:bg-[#e50914] before:rounded">
+            <div className="max-w-7xl mx-auto px-6">
+                <h2 className="text-3xl font-bold mb-8 pl-4 relative before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:bg-primary before:rounded">
                     Top 5 Movies
                 </h2>
                 <div className="flex flex-col gap-4">

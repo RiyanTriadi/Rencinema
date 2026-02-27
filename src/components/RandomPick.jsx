@@ -28,15 +28,15 @@ export default function RandomPick({ initialMovie }) {
 
     return (
         <section className="py-16">
-            <div className="max-w-[1280px] mx-auto px-6">
-                <h2 className="text-3xl font-bold mb-2 pl-4 relative before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:bg-[#e50914] before:rounded">
+            <div className="max-w-7xl mx-auto px-6">
+                <h2 className="text-3xl font-bold mb-2 pl-4 relative before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:bg-primary before:rounded">
                     🎲 Random Pick
                 </h2>
                 <p className="text-[#888] mb-8 pl-4">Can&apos;t decide what to watch? Let us pick for you!</p>
 
-                <div className="grid grid-cols-1 md:grid-cols-[250px_1fr] gap-10 p-8 bg-[#1a1a1a] border border-[#2e2e2e] rounded-lg">
+                <div className="grid grid-cols-1 md:grid-cols-[250px_1fr] gap-10 p-8 bg-surface border border-border rounded-lg">
                     {/* Poster */}
-                    <div className="relative aspect-[2/3] max-w-[250px] w-full rounded-lg overflow-hidden">
+                    <div className="relative aspect-2/3 max-w-62.5 w-full rounded-lg overflow-hidden">
                         <Image
                             src={getPosterUrl(poster_path, "lg")}
                             alt={title}
@@ -60,7 +60,7 @@ export default function RandomPick({ initialMovie }) {
                                 {genres.map((g) => (
                                     <span
                                         key={g.id}
-                                        className="bg-[#242424] border border-[#2e2e2e] text-[#888] px-3 py-1 rounded text-xs"
+                                        className="bg-surface border border-border text-[#888] px-3 py-1 rounded text-xs"
                                     >
                                         {g.name}
                                     </span>
@@ -73,14 +73,14 @@ export default function RandomPick({ initialMovie }) {
                         <div className="flex gap-3 flex-wrap">
                             <Link
                                 href={`/movies/${id}`}
-                                className="inline-flex items-center gap-2 bg-[#e50914] hover:bg-[#b20710] text-white px-6 py-3 rounded-lg font-semibold text-sm transition-colors"
+                                className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white px-6 py-3 rounded-lg font-semibold text-sm transition-colors"
                             >
                                 View Details
                             </Link>
                             <button
                                 onClick={handlePick}
                                 disabled={loading}
-                                className="inline-flex items-center gap-2 bg-[#333] hover:bg-[#444] text-[#f0f0f0] px-6 py-3 rounded-lg font-semibold text-sm transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+                                className="inline-flex items-center gap-2 bg-[#333] hover:bg-[#444] text-text px-6 py-3 rounded-lg font-semibold text-sm transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
                             >
                                 {loading ? "Picking..." : "🎲 Pick Again"}
                             </button>

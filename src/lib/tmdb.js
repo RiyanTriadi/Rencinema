@@ -74,3 +74,13 @@ export function getBackdropUrl(path, size = "lg") {
   if (!path) return "/placeholder-backdrop.jpg";
   return `${IMAGE_SIZES.backdrop[size]}${path}`;
 }
+
+export async function searchMovies(query, page = 1) {
+  if (!query?.trim()) return { results: [], total_results: 0, total_pages: 0 };
+  const data = await fetchTMDB("/search/movie", { query: query.trim(), page });
+  return {
+    results: data.results,
+    total_results: data.total_results,
+    total_pages: data.total_pages,
+  };
+}

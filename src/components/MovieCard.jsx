@@ -9,7 +9,7 @@ export default function MovieCard({ movie }) {
 
     return (
         <Link href={`/movies/${id}`} className="block group">
-            <div className="relative aspect-[2/3] rounded-lg overflow-hidden bg-[#1a1a1a] mb-3">
+            <div className="relative aspect-2/3 rounded-lg overflow-hidden bg-surface mb-3">
                 <Image
                     src={getPosterUrl(poster_path, "md")}
                     alt={title}
@@ -18,8 +18,8 @@ export default function MovieCard({ movie }) {
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 {/* Rating overlay on hover */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                    <span className="text-sm font-semibold text-[#f5c518]">⭐ {rating}</span>
+                <div className="absolute inset-0 bg-linear-to-t from-black/70 to-transparent flex items-end p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                    <span className="text-sm font-semibold text-rating">⭐ {rating}</span>
                 </div>
             </div>
             <div className="px-0.5">
