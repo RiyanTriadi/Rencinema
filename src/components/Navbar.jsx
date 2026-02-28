@@ -40,7 +40,7 @@ export default function Navbar() {
                             className="absolute right-0 top-0 h-full px-3 text-[#888] hover:text-text transition-colors cursor-pointer"
                             aria-label="Search"
                         >
-                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <i className="fa-solid fa-magnifying-glass"></i>
                         </button>
                     </div>
                 </form>

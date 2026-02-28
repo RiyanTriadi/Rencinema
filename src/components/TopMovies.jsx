@@ -10,7 +10,7 @@ function TopMovieItem({ movie, rank }) {
             href={`/movies/${id}`}
             className="flex items-start gap-4 p-4 bg-surface border border-border rounded-lg hover:border-primary hover:translate-x-1 transition-all duration-200"
         >
-            <span className="text-4xl font-black text-rating min-w-10 leading-none pt-1">
+            <span className="text-4xl font-black text-accent min-w-10 leading-none pt-1">
                 #{rank}
             </span>
 

@@ -81,16 +81,16 @@ export default function HeroSlider({ movies }) {
             <button
                 onClick={goPrev}
                 aria-label="Previous"
-                className="absolute left-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 text-white text-3xl flex items-center justify-center transition-colors cursor-pointer"
+                className="absolute hidden md:block left-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 text-white text-3xl flex items-center justify-center transition-colors cursor-pointer"
             >
-                <i class="fa-solid fa-chevron-left"></i>
+                <i className="fa-solid fa-chevron-left"></i>
             </button>
             <button
                 onClick={goNext}
                 aria-label="Next"
-                className="absolute right-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 text-white text-3xl flex items-center justify-center transition-colors cursor-pointer"
+                className="absolute hidden md:block right-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 text-white text-3xl flex items-center justify-center transition-colors cursor-pointer"
             >
-                <i class="fa-solid fa-chevron-right"></i>
+                <i className="fa-solid fa-chevron-right"></i>
             </button>
 
             {/* Dots */}
